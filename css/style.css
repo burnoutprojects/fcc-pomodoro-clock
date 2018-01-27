@@ -1,0 +1,125 @@
+/* Fonts */
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Variables */
+
+:root {
+    --bg-color: #F24D16;
+    --primary-color: #FFFCE6;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: auto;
+    background: var(--bg-color);
+    color: var(--primary-color) !important;
+}
+
+.container {
+    min-height: calc(100vh - 300px);
+}
+
+.page-title {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 5em;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: capitalize;
+    padding: 20px;
+}
+
+header .session {
+    display: flex;
+    font-size: .8em;
+}
+
+header .session .break-ctrl, header .session .session-ctrl {
+    display: inline;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+header .session .minus, header .session .plus {
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    outline: none;
+}
+
+header .session .time {
+    font-size: 2.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.timer-box {
+    margin-bottom: 20px;
+}
+
+.timer-box .title {
+    text-align: center;
+    line-height: 180px;
+    font-size: .8em;
+}
+
+.timer-box .timer {
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    font-size: 4em;
+    border: 2px solid #EDD834;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.timer-box .timer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: 2;
+    border: 4px solid #F24D16;
+}
+
+.timer-box .fill {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    margin: 20px auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+footer a {
+    color: var(--primary-color);
+}
